@@ -110,3 +110,44 @@ header {
 .input::placeholder{
     color: white;
 }
+
+/* CARROUSEL */
+
+.carrousel{
+    width: 100%;
+    overflow: scroll;
+    padding: 3rem;
+    position: relative;
+}
+
+.carrousel__container{
+    white-space: nowrap;
+    margin: 7rem 0;
+    padding-bottom: 1rem;
+}
+
+.carrousel__item{
+    background-color: #eee;
+    width: 20rem;
+    height: 25rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin-right: 1rem;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+}
+
+.carrousel__item:hover ~ .carrousel__item{
+    transform:translate3d(10rem,0,0);
+}
+
+.carrousel__container:hover .carrousel__item{
+    opacity: 0.3;
+}
+
+.carrousel__container:hover .carrousel__item:hover{
+    transform: scale(1.5);
+    opacity: 1;
+}
