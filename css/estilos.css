@@ -175,3 +175,65 @@ header {
 .carrousel-item__details:hover{
     opacity: 1;
 }
+
+/* iniciar-sesion */
+.iniciar-sesion{
+    background: linear-gradient(#21C08B,#AB88FF);
+}
+
+.iniciar-sesion > .header{
+    background-color: transparent;
+}
+
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 3rem;
+    min-height: calc(100vh - 20rem);
+}
+
+.login__container{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 0.2rem solid white;
+    border-radius: 4rem;
+    color: white;
+    padding: 6rem 6.8rem 4rem;
+    min-height: 70rem;
+    width: 50rem;
+}
+
+.login__container--form{
+    display: flex;
+    flex-direction: column;
+}
+
+.login__container--form label{
+    font-size: 1.4rem;
+}
+
+.login__container--remember-me{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.login__container--remember-me a{
+    color: white;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.login__container--remember-me a:hover{
+    text-decoration: underline;
+}
+
+.login__container--social-media > div {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-bottom: 1rem;
+}
