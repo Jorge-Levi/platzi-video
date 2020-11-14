@@ -177,15 +177,15 @@ header {
 }
 
 /* iniciar-sesion */
-.iniciar-sesion{
+.body{
     background: linear-gradient(#21C08B,#AB88FF);
 }
 
-.iniciar-sesion > .header{
+.body > .header{
     background-color: transparent;
 }
 
-.login{
+.form{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -194,7 +194,7 @@ header {
     min-height: calc(100vh - 20rem);
 }
 
-.login__container{
+.form__container{
     background-color: rgba(255, 255, 255, 0.1);
     border: 0.2rem solid white;
     border-radius: 4rem;
@@ -202,18 +202,22 @@ header {
     padding: 6rem 6.8rem 4rem;
     min-height: 70rem;
     width: 50rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    box-shadow: 0 0 3rem rgb(83, 83, 83);
 }
 
-.login__container--form{
+.form__container--form{
     display: flex;
     flex-direction: column;
 }
 
-.login__container--form label{
+.form__container--form label{
     font-size: 1.4rem;
 }
 
-.login__container--remember-me{
+.form__container--remember-me{
     color: white;
     display: flex;
     justify-content: space-between;
@@ -221,19 +225,94 @@ header {
     margin-bottom: 1rem;
 }
 
-.login__container--remember-me a{
+.form__container--remember-me a{
     color: white;
     font-size: 1.4rem;
     text-decoration: none;
 }
 
-.login__container--remember-me a:hover{
+.form__container--remember-me a:hover{
     text-decoration: underline;
 }
 
-.login__container--social-media > div {
+.form__container--social-media > div {
     display: flex;
     /* justify-content: center; */
     align-items: center;
     margin-bottom: 1rem;
+}
+
+.form__container--social-media > div > img{
+    width: 3rem;
+    margin-right: 1rem;
+}
+
+.form__container--registro{
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.form__container--registro a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.form__container--registro a:hover{
+    text-decoration: underline;
+}
+
+.form__container--form > .input{
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.2rem solid white;
+    border-radius: 0;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+    height: 5rem;
+}
+
+.button{
+    background-color: rgba(255, 255, 255,0.1);
+    border: none;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    height: 5rem;
+    letter-spacing: 0.1rem;
+    margin: 1rem 0;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    height: 10rem;
+    width: 100%;
+    background-color: transparent;
+    margin-top: 2rem;
+}
+.footer a{
+    color: white;
+    cursor: pointer;
+    padding-left: 3rem;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
+
+.form__container--iniciar-sesion{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+}
+
+.form__container--iniciar-sesion:hover{
+    text-decoration: underline;
 }
