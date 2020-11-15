@@ -208,6 +208,16 @@ header {
     box-shadow: 0 0 3rem rgb(83, 83, 83);
 }
 
+@media only screen and (max-width: 600px){
+    .form__container{
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        width: 100%;
+        box-shadow: none;
+    }
+}
+
 .form__container--form{
     display: flex;
     flex-direction: column;
@@ -295,6 +305,14 @@ header {
     background-color: transparent;
     margin-top: 2rem;
 }
+
+@media only screen and (max-width: 600px){
+    .footer{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
 .footer a{
     color: white;
     cursor: pointer;
@@ -316,3 +334,4 @@ header {
 .form__container--iniciar-sesion:hover{
     text-decoration: underline;
 }
+
