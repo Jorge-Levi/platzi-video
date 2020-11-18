@@ -1,0 +1,362 @@
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    /* 1rem = 10px */
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+    background-color:#8f57fd;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Markazi Text', serif;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color:#8f57fd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__img {
+    display: inline-block;
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.header__menu {
+    margin-right: 30px;
+}
+
+.header__menu ul{
+    display: none;
+    list-style: none;
+    padding: 0rem;
+    position: absolute;
+    width: 10rem;
+    text-align: right;
+    margin: 0rem 0rem 0rem -1.3rem;
+}
+
+.header__menu:hover ul, ul:hover{
+    display: block;
+}
+
+.header__menu li{
+    margin: 1rem 0;
+}
+
+.header__menu ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.header__menu li a:hover{
+    text-decoration: underline;
+}
+
+.header__menu--profile{
+    display: flex;
+    align-items: center;
+}
+
+.header__menu--profile p{
+    margin: 0;
+    color: white;
+}
+
+.header__menu--profile img{
+    margin-right: 0.8rem;
+    width: 4.5rem;
+}
+
+/* MAIN */
+
+.main{
+    text-align: center;
+}
+
+.main__titulo{
+    color: white;
+    font-size: 2.5rem;
+}
+
+.categories__title{
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    padding-left: 3rem;
+    width: 100%;
+}
+
+.input{
+    border: 0.2rem solid white;
+    outline: none;
+    border-radius: 0.8rem;
+    color: white;
+    font-size: 1.6rem;
+    padding: 0 2rem;
+    height: 3.5rem;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.input::placeholder{
+    color: white;
+}
+
+/* CARROUSEL */
+
+.carrousel{
+    width: 100%;
+    overflow: scroll;
+    padding: 3rem;
+    position: relative;
+}
+
+.carrousel__container{
+    white-space: nowrap;
+    margin: 7rem 0;
+    padding-bottom: 1rem;
+}
+
+.carrousel-item{
+    background-color: #eee;
+    width: 20rem;
+    height: 25rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin-right: 1rem;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+    position: relative;
+}
+
+.carrousel-item:hover ~ .carrousel-item{
+    transform:translate3d(10rem,0,0);
+}
+
+.carrousel__container:hover .carrousel-item{
+    opacity: 0.3;
+}
+
+.carrousel__container:hover .carrousel-item:hover{
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.carrousel-item__img{
+    width: 20rem;
+    height: 25rem;
+    object-fit: cover;
+}
+
+.carrousel-item__details{
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    font-size: 1rem;
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 1rem;
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+}
+
+.carrousel-item__details:hover{
+    opacity: 1;
+}
+
+/* iniciar-sesion */
+.body{
+    background: linear-gradient(#21C08B,#AB88FF);
+}
+
+.body > .header{
+    background-color: transparent;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 3rem;
+    min-height: calc(100vh - 20rem);
+}
+
+.form__container{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 0.2rem solid white;
+    border-radius: 4rem;
+    color: white;
+    padding: 6rem 6.8rem 4rem;
+    min-height: 70rem;
+    width: 50rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    box-shadow: 0 0 3rem rgb(83, 83, 83);
+}
+
+@media only screen and (max-width: 600px){
+    .form__container{
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        width: 100%;
+        box-shadow: none;
+    }
+}
+
+.form__container--form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form__container--form label{
+    font-size: 1.4rem;
+}
+
+.form__container--remember-me{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form__container--remember-me a{
+    color: white;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.form__container--remember-me a:hover{
+    text-decoration: underline;
+}
+
+.form__container--social-media > div {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.form__container--social-media > div > img{
+    width: 3rem;
+    margin-right: 1rem;
+}
+
+.form__container--registro{
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.form__container--registro a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.form__container--registro a:hover{
+    text-decoration: underline;
+}
+
+.form__container--form > .input{
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.2rem solid white;
+    border-radius: 0;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+    height: 5rem;
+}
+
+.button{
+    background-color: rgba(255, 255, 255,0.1);
+    border: none;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    height: 5rem;
+    letter-spacing: 0.1rem;
+    margin: 1rem 0;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    height: 10rem;
+    width: 100%;
+    background-color: transparent;
+    margin-top: 2rem;
+}
+
+@media only screen and (max-width: 600px){
+    .footer{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+.footer a{
+    color: white;
+    cursor: pointer;
+    padding-left: 3rem;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
+
+.form__container--iniciar-sesion{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+}
+
+.form__container--iniciar-sesion:hover{
+    text-decoration: underline;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar {
+    width: 8px; 
+    height: 8px;   
+    background:rgba(255,255,255,.4);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  ::-webkit-scrollbar:hover:active {
+    background: #999;
+  }
